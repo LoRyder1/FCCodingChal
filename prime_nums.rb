@@ -28,34 +28,38 @@ class TableOfPrimes
 
   def prime_numbers n
     count = 1
-    while primes.size != n
+    while primes.size != n+1
       @primes << count if count.is_prime?
       count += 1
     end
   end
 
   def create_table
-    table = []
-    nums = prime_numbers 10
-    nums.each do |x|
-      table << [x]
+    print '     '
+    @primes.each do |i|
+      print "%-3d  " % i
     end
-    table
+    print "\n     "
+    @primes.each do |i|
+      print '---- '
+    end
+    print "\n"
+    @primes.each do |j|
+      print "%-3d| " % j
+      @primes.each do |i|
+        print "%-3d  " % (i*j)
+      end
+      print "\n"
+    end
+
   end
-  
+
 end
-
-
-
-def populate
-  arr = [nil, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
-  ar2 = [2, 4, 6, 10, 14, 22, 26, 34, 38, 46, 58]
-  # Array.new(10){Array.new(1){["x","o"].sample}}
-end
-
-p populate
 
 
 pr = TableOfPrimes.new
 pr.prime_numbers 10
-pr.primes
+# p pr.primes
+
+pr.create_table
+
