@@ -20,13 +20,42 @@ class Fixnum
   end
 end
 
-def prime_numbers n
-  count, primes = 1, []
-  while primes.size != n
-    primes << count if count.is_prime?
-    count += 1
+class TableOfPrimes
+  attr_reader :primes
+  def initialize
+    @primes = []
   end
-  primes
+
+  def prime_numbers n
+    count = 1
+    while primes.size != n
+      @primes << count if count.is_prime?
+      count += 1
+    end
+  end
+
+  def create_table
+    table = []
+    nums = prime_numbers 10
+    nums.each do |x|
+      table << [x]
+    end
+    table
+  end
+  
 end
 
-p prime_numbers 10
+
+
+def populate
+  arr = [nil, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+  ar2 = [2, 4, 6, 10, 14, 22, 26, 34, 38, 46, 58]
+  # Array.new(10){Array.new(1){["x","o"].sample}}
+end
+
+p populate
+
+
+pr = TableOfPrimes.new
+pr.prime_numbers 10
+pr.primes
