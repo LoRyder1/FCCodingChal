@@ -7,6 +7,7 @@ Write a program that prints out a multiplication table of the first 10 prime num
 OBJECTIVE
 
 # Object Oriented Programming - sending a message to methods
+# 1.is_prime? == nil
 
 class Fixnum
   def is_prime?
@@ -20,15 +21,12 @@ class Fixnum
 end
 
 def prime_numbers n
-  count = 1
-  primes = []
-  while primes.size != 10
+  count, primes = 1, []
+  while primes.size != n
     primes << count if count.is_prime?
     count += 1
   end
-
   primes
 end
-
 
 p prime_numbers 10
