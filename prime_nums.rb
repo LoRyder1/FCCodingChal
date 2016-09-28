@@ -1,4 +1,5 @@
 # Funding Circle Coding Challenge
+require 'pp'
 
 <<-OBJECTIVE
 Write a program that prints out a multiplication table of the first 10 prime numbers.
@@ -36,22 +37,28 @@ class TableOfPrimes
 
   def create_table
     print '     '
-    @primes.each do |i|
-      print "%-3d  " % i
-    end
+    @primes.each{|i| print "%-3d  " % i}
     print "\n     "
-    @primes.each do |i|
-      print '---- '
-    end
+    @primes.each{|i| print '---- '}
     print "\n"
+
     @primes.each do |j|
       print "%-3d| " % j
-      @primes.each do |i|
-        print "%-3d  " % (i*j)
-      end
+      @primes.each{|i| print "%-3d  " % (i*j)}
       print "\n"
     end
+  end
 
+  def create_matrix
+    matrix = [@primes]
+
+    @primes.each do |j|
+      arr = [j]
+      @primes.each{|i| arr << (i*j)}
+      matrix << arr
+    end
+
+    matrix
   end
 
 end
@@ -63,3 +70,4 @@ pr.prime_numbers 10
 
 pr.create_table
 
+pp pr.create_matrix
