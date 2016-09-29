@@ -30,11 +30,8 @@ class TableOfPrimes
     @matrix = []
   end
 
-  def display
-    
-  end
-
   def prime_numbers n
+    @primes, @matrix = [], [] 
     count = 1
     while primes.size != n
       @primes << count if count.is_prime?
@@ -84,27 +81,26 @@ end
   print "\e[2J"
   
 puts 'Welcome to Prime Number Multiplication Tables'
-  print '====================================================' 
-  print "\n"
+  print "====================================================\n"
   pr = TableOfPrimes.new
   pr.prime_numbers 10
   puts "Table with the first 10 prime numbers:"
   pr.create_table
-  print '====================================================' 
-  print "\n"
-  print "\n"
+  print "====================================================\n\n"
   
 puts "What N size prime number multiplication would you like?\n"
-  x = gets.chomp
+  n = gets.chomp
   print "\n"
 
-puts 'Table with the first ' + x + ' prime numbers:'
-  print '===================================================='
-  print "\n"
+puts 'Table with the first ' + n + ' prime numbers:'
+  print "====================================================\n"
 
-  pr = TableOfPrimes.new
-  pr.prime_numbers(x.to_i)
+  pr.prime_numbers(n.to_i)
   pr.create_table
+
+  print "\n"
+
+
 
 
 
