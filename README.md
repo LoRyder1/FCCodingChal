@@ -29,7 +29,7 @@ Write a program that prints out a multiplication table of the first 10 prime num
   1. run program: navigate to project directory
 
   ```
-  bundle exec ruby lib/prime_nums.rb
+  bundle exec ruby lib/runner.rb
   ```
 
 ## Running the tests
