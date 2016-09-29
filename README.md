@@ -43,18 +43,18 @@ Write a program that prints out a multiplication table of the first 10 prime num
   These are unit tests to individually and independently test the program parts/units. The purpose is to validate that each unit of the software performs as designed.
   Methods tested: *is_prime?*, *prime_numbers*, *create_table*, *create_matrix*, *functional_programming*
   2. run cucumber tests
+
   ```
   bundle exec cucumber
   ```
-  These are acceptance tests written in BDD style. The purpose of this test is to evaluate teh system's compliance with business requirements and assess whether it is acceptable for delivery.
+
+  These are acceptance tests written in BDD style. The purpose of this test is to evaluate the system's compliance with business requirements and assess whether it is acceptable for delivery.
 
 ## Complexity
 
-  Big-O notation - express the runtime in terms of *how quickly it grows relative to the input, as the input gets arbitrarily large.*
+  Big-O notation - expresses the runtime in terms of *how quickly it grows relative to the input, as the input gets arbitrarily large.*
 
-  The runtime grows "on the order of the square of the size of the input" (O(n^2)). Nesting two loops -> outer loops runs n times and our inner loop runs n times for each iteration of the outer loop, giving us n^2 total prints. **This program runs in O(n^2) time (or "quadratic time").** 
-
-  Less significant terms quickly become less signficant as n gets big.
+  The runtime grows **"on the order of the square of the size of the input" (O(n^2)) or quadratic time**. Nesting two loops -> outer loops runs n times and our inner loop runs n times for each iteration of the outer loop, giving us n^2 total prints.
 
   We are talking about the "worst case" scenario.
   
