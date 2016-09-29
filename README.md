@@ -19,27 +19,27 @@ Write a program that prints out a multiplication table of the first 10 prime num
   cd FCCodingChal
   ```
   3. Install any missing gems
+  
   ```
-
   bundle install
   ```
 
 ### Getting Started 
 
   1. run program: navigate to project directory
+
   ```
-  
   bundle exec ruby lib/prime_nums.rb
   ```
 
 ## Running the tests
 
   1. run rspec tests
-  ```
 
+  ```
   bundle exec rspec spec/prime_num_spec.rb
-
   ```
+  
   These are unit tests to individually and independently test the program parts/units. The purpose is to validate that each unit of the software performs as designed.
   Methods tested: *is_prime?*, *prime_numbers*, *create_table*, *create_matrix*, *functional_programming*
   2. run cucumber tests
