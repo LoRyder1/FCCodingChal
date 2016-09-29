@@ -1,3 +1,4 @@
+@createtable
 Feature: To create prime number multiplication table
 In order to make a multiplication table
 I want to multiply prime numbers

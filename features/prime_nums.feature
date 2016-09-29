@@ -1,3 +1,4 @@
+@fixnum
 Feature: To calculate prime numbers
 In order to make a multiplication table
 I want to see whether a Fixnum is prime
