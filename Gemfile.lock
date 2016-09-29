@@ -46,6 +46,7 @@ GEM
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.0)
     slop (3.6.0)
+    to_bool (1.0.1)
 
 PLATFORMS
   ruby
@@ -57,3 +58,7 @@ DEPENDENCIES
   require_all
   rspec
   simplecov
+  to_bool
+
+BUNDLED WITH
+   1.13.1

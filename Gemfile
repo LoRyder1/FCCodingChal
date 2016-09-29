@@ -6,3 +6,5 @@ gem 'rake'
 gem 'require_all'
 gem 'pry'
 gem 'simplecov', :require =>false, :group => :test
+
+gem 'to_bool'

@@ -1,16 +1,10 @@
-require 'pp'
-require 'pry'
-# Object Oriented Programming - sending a message to methods
-# 1.is_prime? == nil
+
 
 class Fixnum
   def is_prime?
-    x = self - 1
-    while x > 1
-      return false if (self % x).zero?
-      x -=1
-    end
-    true unless self == 1 # 1 is not a prime number
+    return false if self <= 1
+    Math.sqrt(self).to_i.downto(2).each {|i| return false if self % i == 0}
+    true
   end
 end
 
@@ -64,7 +58,7 @@ class TableOfPrimes
 
 end
 
-# ======= CONTROLLER =========
+# ======= CONTROLLER/VIEW =========
 
 puts <<-WELCOME
 \e[2J
@@ -99,5 +93,3 @@ TABLE2
 
   pr2 = TableOfPrimes.new(n.to_i) 
   pr2.create_table
-
-
