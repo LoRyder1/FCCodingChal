@@ -1,5 +1,6 @@
 # Funding Circle Coding Challenge
 require 'pp'
+require 'benchmark'
 
 <<-OBJECTIVE
 Write a program that prints out a multiplication table of the first 10 prime numbers.
@@ -17,6 +18,7 @@ class Fixnum
       return false if (self % x).zero?
       x -=1
     end
+    # 1 is not a prime number
     true unless self == 1
   end
 end
@@ -25,14 +27,20 @@ class TableOfPrimes
   attr_reader :primes
   def initialize
     @primes = []
+    @matrix = []
+  end
+
+  def display
+    
   end
 
   def prime_numbers n
     count = 1
-    while primes.size != n+1
+    while primes.size != n
       @primes << count if count.is_prime?
       count += 1
     end
+    @matrix << primes
   end
 
   def create_table
@@ -50,24 +58,54 @@ class TableOfPrimes
   end
 
   def create_matrix
-    matrix = [@primes]
-
     @primes.each do |j|
       arr = [j]
       @primes.each{|i| arr << (i*j)}
-      matrix << arr
+      @matrix << arr
     end
+    @matrix[0].unshift('')
+    @matrix
+  end
 
-    matrix
+  def functional_programming
+    count = 0
+    @primes.product(@primes).map{|x,y| x*y}.each_slice(10) do |x|
+      @matrix << x.to_a.unshift(@primes[count])
+      count+=1
+    end
+    @matrix[0].unshift('')
+    @matrix
   end
 
 end
 
+# ======= CONTROLLER =========
 
-pr = TableOfPrimes.new
-pr.prime_numbers 10
-# p pr.primes
+  print "\e[2J"
+  
+puts 'Welcome to Prime Number Multiplication Tables'
+  print '====================================================' 
+  print "\n"
+  pr = TableOfPrimes.new
+  pr.prime_numbers 10
+  puts "Table with the first 10 prime numbers:"
+  pr.create_table
+  print '====================================================' 
+  print "\n"
+  print "\n"
+  
+puts "What N size prime number multiplication would you like?\n"
+  x = gets.chomp
+  print "\n"
 
-pr.create_table
+puts 'Table with the first ' + x + ' prime numbers:'
+  print '===================================================='
+  print "\n"
 
-pp pr.create_matrix
+  pr = TableOfPrimes.new
+  pr.prime_numbers(x.to_i)
+  pr.create_table
+
+
+
+
