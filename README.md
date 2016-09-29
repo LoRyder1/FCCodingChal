@@ -19,7 +19,7 @@ Write a program that prints out a multiplication table of the first 10 prime num
   cd FCCodingChal
   ```
   3. Install any missing gems
-  
+
   ```
   bundle install
   ```
@@ -48,8 +48,17 @@ Write a program that prints out a multiplication table of the first 10 prime num
 
   bundle exec cucumber features/prime_nums_table.feature
   ```
-  These are acceptance tests written in BDD style. The purpose of this test is to evaluate teh system's compliance withe business requirements and assess whether it is acceptable for delivery.
+  These are acceptance tests written in BDD style. The purpose of this test is to evaluate teh system's compliance with business requirements and assess whether it is acceptable for delivery.
 
+## Complexity
+
+  Big-O notation - express the runtime in terms of *how quickly it grows relative to the input, as the input gets arbitrarily large.*
+
+  The runtime grows "on the order of the square of the size of the input" (O(n^2)). Nesting two loops -> outer loops runs n times and our inner loop runs n times for each iteration of the outer loop, giving us n^2 total prints. **This program runs in O(n^2) time (or "quadratic time").** 
+
+  Less significant terms quickly become less signficant as n gets big.
+
+  We are talking about the "worst case" scenario.
 ## Built with
 
 * Ruby - is a dynamic, reflective, object-oriented, general-purpose programming language.
