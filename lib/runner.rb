@@ -1,6 +1,6 @@
 # ==== CONTROLLER/VIEW
 
-require_relative 'prime_nums'
+require_relative 'model/prime_nums'
 
 puts <<-WELCOME
 \e[2J

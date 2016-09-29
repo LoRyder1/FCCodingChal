@@ -37,16 +37,14 @@ Write a program that prints out a multiplication table of the first 10 prime num
   1. run rspec tests
 
   ```
-  bundle exec rspec spec/prime_num_spec.rb
+  bundle exec rspec
   ```
   
   These are unit tests to individually and independently test the program parts/units. The purpose is to validate that each unit of the software performs as designed.
   Methods tested: *is_prime?*, *prime_numbers*, *create_table*, *create_matrix*, *functional_programming*
   2. run cucumber tests
   ```
-  bundle exec cucumber features/prime_nums.feature
-
-  bundle exec cucumber features/prime_nums_table.feature
+  bundle exec cucumber
   ```
   These are acceptance tests written in BDD style. The purpose of this test is to evaluate teh system's compliance with business requirements and assess whether it is acceptable for delivery.
 
@@ -59,6 +57,7 @@ Write a program that prints out a multiplication table of the first 10 prime num
   Less significant terms quickly become less signficant as n gets big.
 
   We are talking about the "worst case" scenario.
+  
 ## Built with
 
 * Ruby - is a dynamic, reflective, object-oriented, general-purpose programming language.
