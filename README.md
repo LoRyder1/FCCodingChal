@@ -48,3 +48,7 @@ Write a program that prints out a multiplication table of the first 10 prime num
 * Ruby - is a dynamic, reflective, object-oriented, general-purpose programming language.
 * rspec - is a behavior-driven development (BDD) framework for the Ruby programming language.
 * cucumber - is a software tool used to run accepatance testing for software
+
+## Authors
+
+* **Lovinder Pnag** - *Initial work* - [LoRyder1](https://github.com/LoRyder1)
