@@ -1,4 +1,4 @@
-# Funding Circle Coding Challenge
+# Code Challenge
 
 Write a program that prints out a multiplication table of the first 10 prime numbers.
   - The program must run from the command line and print one table to STDOUT.
